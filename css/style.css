@@ -1,0 +1,121 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap');
+/* CSS Document */
+
+--steel-blue: #3f7cac;
+--pewter-blue: #95afba;
+--space-cadet: #1e2749;
+--light-grey: #dddddd;
+
+body{
+    font-size: 14pt;
+}
+
+p {
+    padding: 5px 10px 5px 10px;
+    line-height: 120%;
+    font-family: Raleway;
+    font-weight: 300;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+ul {
+    margin-left: 20px;
+    padding: 5px 10px;
+    line-height: 120%;
+    list-style-type: disc;
+    font-family: Raleway;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+em {
+    font-weight: 500;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #3f7cac;
+    padding: 10px;
+    color: #dddddd;
+    font-family: Montserrat;
+}
+
+#header h1{
+    font-size: 2.3em;
+}
+
+#mainArea {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    border: 1px solid #3f7cac;
+}
+
+#sectionHead{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    background-color: #95afba;
+    padding: 5px 0px 5px 20px;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+#sectionHead h1{
+    font-size: 1.7em;
+    padding-bottom: 5px;
+}
+
+#sectionHead h2 {
+    padding-left: 30px;
+    color: #dddddd;
+    font-size: 1.5em;
+}
+
+.problemText {
+    background-color: #95afba;
+    margin: 0px 20px;
+    padding: 10px 20px;
+    font-family: Montserrat;
+    font-size: 1.2em;
+    line-height: 120%
+}
+
+.paraHead{
+    padding: 10px 0px 0px 10px;
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.imageLeft {
+    float: left;
+    padding:0px 20px 0px 10px;
+}
+
+.imageRight {
+    float: right;
+    padding:0px 10px 0px 20px;
+}
+
+.navButton {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: #1e2749;
+    color: #dddddd;
+    width:200px;
+    height: 40px;
+    border: 1px solid #000000;
+    margin: 10px auto;
+    padding: 5px;
+    font-family: Montserrat;
+    font-weight: bold;
+    text-align: center;
+}
