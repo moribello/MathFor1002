@@ -14,7 +14,8 @@ function genWordProb() {
     let flowRate = getFlowRate(randomSize);
     hoseSize = (humanNames[randomSize]); //gets the human-friendly number from the data object above
 
-    document.getElementById('wordProblem').innerHTML = `Your engine is currently running ${flowRate} gpm of water through ${hoseLength} feet of ${hoseSize} `
+    document.getElementById('wordProblem').innerHTML = `Your engine is currently running ${flowRate} gpm of water through ${hoseLength} feet of ${hoseSize}`
+    return [flowRate, hoseLength, randomSize];
 }
     
 function getRandomInt(max) { //function creates a random integer for number of lengths of hose
@@ -42,10 +43,41 @@ function getFlowRate(hoseSize) {
     }
     return flowRate;
 }
-//
-//let hoseLength = getHoseLength(randomSize);
-//let flowRate = getFlowRate(randomSize);
 
-genWordProb();
+function checkAnswer(values) {
+    let usrFlow = document.getElementById("usrFlow").value;
+    let usrLength = document.getElementById("usrLength").value;
+    let usrHoseSize = document.getElementById("usrHoseSize").value;
+    console.log(`User value: ${usrFlow}`);
+    console.log(`Correct value: ${values[0]}`);
+    // check user flow value
+    if (usrFlow == "") {
+        document.getElementById("usrFlow").style.backgroundColor = "#dddddd";
+    } else if (usrFlow == values[0]) {
+        document.getElementById("usrFlow").style.backgroundColor = "#a7fe97"; 
+    } else {
+        document.getElementById("usrFlow").style.backgroundColor = "#fe9797";
+    }
+    
+}
 
-// JavaScript Document
+let values = genWordProb(); // generate initial word problem
+
+checkAnswer(values);
+
+const checkBut = document.getElementById("checkAnswer");
+const newBut = document.getElementById("newProb");
+
+// Event listener for generating new problem
+newBut.addEventListener('click', function () {
+        let values = genWordProb();
+});
+newBut.addEventListener("mouseenter", function( event ) {   
+  event.target.style.backgroundColor = "red";
+});
+newBut.addEventListener("mouseout", function( event ) {   
+  event.target.style.backgroundColor = "#dddddd";
+});
+checkBut.addEventListener('click', function() {
+    checkAnswer(values);
+});

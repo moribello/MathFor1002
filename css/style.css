@@ -128,8 +128,46 @@ input[type=text] {
     text-align: center;
 }
 
+.answer{
+    display:flex;
+    flex-direction: row;
+    background-color: #95afba;
+    margin: 0px 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    line-height: 120%;
+}
+
+.answerText {
+    width: 35%;
+    margin: 0px 20px;
+    padding: 10px 20px;
+    text-align: right;
+    font-family: Raleway;
+    font-size: 1em;
+    line-height: 120%;
+}
+
 .answerBox {
     padding: 5px 10px;
     line-height: 40px;
     font-family: Raleway;
+}
+
+.ctrlButton {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: #dddddd;
+    color: #1E2749;
+    width:200px;
+    height: 30px;
+    border: 1px solid #000000;
+    margin: 10px auto;
+    padding: 5px;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: .8em;
+    text-align: center;
 }

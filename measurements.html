@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div id="header"><h1>dMath for 1002 Class</h1>
+    <div id="header"><h1>Math for 1002 Class</h1>
     </div>
     
     <div id="mainArea">
@@ -30,17 +30,24 @@
         <div class="problemText" id="wordProblem">
             <p>this is placeholder text</p>
         </div> <!-- end of word problem div -->
-            <div class="problemText"><p>Length of hose (in feet): </p>
+        <div class="answer">
+                <div class="answerText">Length of hose (in feet): </div>
                 <div class="answerBox"><input type="text" id="usrLength"></div>
-            </div>
-        
-            <div class="problemText"><p>Size of hose (in inches): </p>
-                <div class="answerBox"><input type="text" id="usrHoseSize"></div>
-            </div>
-        
-            <div class="problemText"><p>Amount of flow (in gallons per minute): </p>
+        </div>
+        <div class="answer">
+            <div class="answerText">Size of hose (in inches): </div>
+            <div class="answerBox"><input type="text" id="usrHoseSize"></div>
+        </div>
+        <div class="answer">
+            <div class="answerText">Amount of flow (in gallons per minute): </div>
                 <div class="answerBox"><input type="text" id="usrFlow"></div>
-            </div>
+        </div>
+        
+        <div class="problemText">
+            <div class="ctrlButton" id="checkAnswer">Check Answer</div>
+            <div class="ctrlButton" id="newProb">New Problem</div>
+        </div>
+        
         <div class="navButton" id="nextButton">Next page</div>
         
     </div> <!-- close of mainArea div -->
