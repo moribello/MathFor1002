@@ -5,6 +5,32 @@ const hlFlow = [100, 118, 210, 328]
 const slFlow = [300, 400, 500, 600, 700, 800, 900, 1000]
 
 //function to create word problem
+function getRandomInt(max) { //function creates a random integer for number of lengths of hose
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+function getHoseLength(randomSize) {
+    let hoseLength = "";
+    if (randomSize <2){
+        hoseLength = (getRandomInt(4) + 1) * 50;
+    } else if (randomSize <3) {
+        hoseLength = (getRandomInt(8) +1) *50;
+    } else {
+        hoseLength = (getRandomInt(10) + 1) * 100;
+    }
+    return hoseLength;
+}
+
+function getFlowRate(hoseSize) {
+    let flowRate = "";
+    if (hoseSize <3){
+        flowRate = hlFlow[Math.floor(Math.random()*hlFlow.length)]; //picks flow rate from hand line flow array
+    } else {
+        flowRate = slFlow[Math.floor(Math.random()*slFlow.length)]; //picks flow rate from hand line flow array
+    }
+    return flowRate;
+}
+
 
 function genWordProb() {
     let randomSize = hoseSizes[Math.floor(Math.random()*hoseSizes.length)]; //picks a random hose size
@@ -12,6 +38,6 @@ function genWordProb() {
     let flowRate = getFlowRate(randomSize);
     hoseSize = (humanNames[randomSize]); //gets the human-friendly number from the data object above
 //
-//    document.getElementById('wordProblem').innerHTML = `Your engine is currently running ${flowRate} gpm of water through ${hoseLength} feet of ${hoseSize}`
+    document.getElementById('wordProblem').innerHTML = `Your engine is currently running ${flowRate} gpm of water through ${hoseLength} feet of ${hoseSize}`
     return [flowRate, hoseLength, randomSize, hoseSize];
 }
