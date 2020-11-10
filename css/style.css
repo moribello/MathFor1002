@@ -161,10 +161,22 @@ input[type=text] {
     font-size: 1.2em;
 }
 
-.answerBox input[type=select] {
-    text-align: left;
+.answerDropdown {
+    position: relative;
     font-family: Raleway;
     font-size: 1.2em;
+}
+
+.answerDropdown select{
+    padding 5px 10px;
+    background-color: #dddddd;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 1em;
+}
+
+.answerDropdown select-selected {
+    background-color: #95afba;
 }
 
 .ctrlButton {
@@ -172,6 +184,7 @@ input[type=text] {
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    cursor: pointer;
     background-color: #dddddd;
     color: #1E2749;
     width:200px;
