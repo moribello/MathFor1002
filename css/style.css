@@ -161,6 +161,12 @@ input[type=text] {
     font-size: 1.2em;
 }
 
+.answerBox input[type=select] {
+    text-align: left;
+    font-family: Raleway;
+    font-size: 1.2em;
+}
+
 .ctrlButton {
     display: flex;
     flex-direction: column;
