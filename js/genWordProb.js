@@ -38,6 +38,5 @@ function genWordProb() {
     let flowRate = getFlowRate(randomSize);
     hoseSize = (humanNames[randomSize]); //gets the human-friendly number from the data object above
 //
-    document.getElementById('wordProblem').innerHTML = `Your engine is currently running ${flowRate} gpm of water through ${hoseLength} feet of ${hoseSize}`
     return [flowRate, hoseLength, randomSize, hoseSize];
 }
