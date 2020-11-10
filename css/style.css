@@ -149,9 +149,16 @@ input[type=text] {
 }
 
 .answerBox {
+    display: block;
     padding: 5px 10px;
     line-height: 40px;
+
+}
+
+.answerBox input[type=text] {
+    text-align: center;
     font-family: Raleway;
+    font-size: 1.2em;
 }
 
 .ctrlButton {

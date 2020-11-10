@@ -53,6 +53,18 @@ function checkUsrAnswers() {
     } else {
         document.getElementById('usrFlow').style.backgroundColor = '#ffb3b3';
     }
+    if (checkAnswers(usrLength, values[1]) == true) {
+        document.getElementById('usrLength').style.backgroundColor = '#ccff66';
+    } else {
+        document.getElementById('usrLength').style.backgroundColor = '#ffb3b3';
+    }
+    if (checkAnswers(usrHoseSize, values[2]) == true) {
+        document.getElementById('usrHoseSize').style.backgroundColor = '#ccff66';
+    } else {
+        document.getElementById('usrHoseSize').style.backgroundColor = '#ffb3b3';
+    }
+    
+    
 }
 
 let values = genWordProb(); // generate initial word problem
