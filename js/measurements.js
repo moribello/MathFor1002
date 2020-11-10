@@ -37,6 +37,7 @@ let values = genWordProb(); // generate initial word problem
     probValues.hoseSize = values[3];
     console.log(probValues);
 // flowRate = 0, hoseLength = 1, randomSize = 2, hoseSize(human friendly) = 3
+    document.getElementById('wordProblem').innerHTML = `Your engine is currently running ${probValues.flowRate} gpm of water through ${probValues.hoseLength} feet of ${probValues.hoseSize}`
 
 const checkBut = document.getElementById("checkAnswer");
 const newBut = document.getElementById("newProb");
@@ -48,6 +49,7 @@ newBut.addEventListener('click', function () {
     probValues.hoseLength = values[1];
     probValues.randomSize = values[2];
     probValues.hoseSize = values[3];
+    document.getElementById('wordProblem').innerHTML = `Your engine is currently running ${probValues.flowRate} gpm of water through ${probValues.hoseLength} feet of ${probValues.hoseSize}`
     console.log(probValues);
 });
 newBut.addEventListener("mouseenter", function( event ) {   
