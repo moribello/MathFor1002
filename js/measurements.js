@@ -1,6 +1,5 @@
 // JavaScript Document
 
-
 const hoseSizes = [1.5, 1.75, 2.5, 3, 4, 5];
 const humanNames = {1.5:"inch and a half handline", 1.75:"inch and three quarters hose", 2.5:"two and a half inch hose", 3:"three inch supply line", 4:"four inch supply line", 5:"five inch LDH"};
 const hlFlow = [100, 118, 210, 328]
@@ -44,26 +43,21 @@ function getFlowRate(hoseSize) {
     return flowRate;
 }
 
-function checkAnswer(values) {
+// check user answers using external checkAnswers function found in checkAnswers.js file
+function checkUsrAnswers() {
     let usrFlow = document.getElementById("usrFlow").value;
     let usrLength = document.getElementById("usrLength").value;
     let usrHoseSize = document.getElementById("usrHoseSize").value;
-    console.log(`User value: ${usrFlow}`);
-    console.log(`Correct value: ${values[0]}`);
+    // flowRate = 0, hoseLength = 1, randomSize = 2
     // check user flow value
-    if (usrFlow == "") {
-        document.getElementById("usrFlow").style.backgroundColor = "#dddddd";
-    } else if (usrFlow == values[0]) {
-        document.getElementById("usrFlow").style.backgroundColor = "#a7fe97"; 
+    if (checkAnswers(usrFlow, values[0]) == true) {
+        document.getElementById('usrFlow').style.backgroundColor = 'green';
     } else {
-        document.getElementById("usrFlow").style.backgroundColor = "#fe9797";
+        document.getElementById('usrFlow').style.backgroundColor = 'red';
     }
-    
 }
 
 let values = genWordProb(); // generate initial word problem
-
-checkAnswer(values);
 
 const checkBut = document.getElementById("checkAnswer");
 const newBut = document.getElementById("newProb");
@@ -79,5 +73,5 @@ newBut.addEventListener("mouseout", function( event ) {
   event.target.style.backgroundColor = "#dddddd";
 });
 checkBut.addEventListener('click', function() {
-    checkAnswer(values);
+    checkUsrAnswers();
 });
