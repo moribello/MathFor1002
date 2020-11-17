@@ -168,7 +168,7 @@ input[type=text] {
 }
 
 .answerDropdown select{
-    padding 5px 10px;
+    padding: 5px 10px;
     background-color: #dddddd;
     text-align: center;
     font-family: Raleway;
@@ -196,4 +196,17 @@ input[type=text] {
     font-weight: bold;
     font-size: .8em;
     text-align: center;
+}
+
+.formulaText {
+    width: 100%;
+    line-height: 2em;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.formulaText sup {
+    vertical-align: super;
+    font-size: smaller;
 }
