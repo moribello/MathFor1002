@@ -30,12 +30,11 @@ function checkUsrAnswers() {
 }
 
 let values = genWordProb(); // generate initial word problem
-    probValues.flowRate = values.flowRate;
-    probValues.hoseLength = values[1];
-    probValues.randomSize = values[2];
-    probValues.hoseSize = values[3];
-// flowRate = 0, hoseLength = 1, randomSize = 2, hoseSize(human friendly) = 3
-    document.getElementById('wordProblem').innerHTML = `Your engine is currently running ${probValues.flowRate} gpm of water through ${probValues.hoseLength} feet of ${probValues.hoseSize}`
+    if(values.isElev == true){
+        document.getElementById('wordProblem').innerHTML = `Calculate the total loss of ${values.hoseLength} feet of ${values.humanNames} equipped with a ${values.humanTip}. <br> <br> Your crew is operating on the ${values.workingFloor} floor.`
+    } else {
+        document.getElementById('wordProblem').innerHTML = `Calculate the total loss of ${values.hoseLength} feet of ${values.humanNames} equipped with a ${values.humanTip}`
+    }
 
 const checkBut = document.getElementById("checkAnswer");
 const newBut = document.getElementById("newProb");

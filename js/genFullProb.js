@@ -4,7 +4,7 @@ const hoseSizes = [1.5, 1.75, 2.5, 3, 4, 5];
 const humanNames = {1.5:"inch and a half handline", 1.75:"inch and three quarters hose", 2.5:"two and a half inch hose", 3:"three inch line", 4:"four inch supply line", 5:"five inch LDH"};
 const hlTipSizes = [.75, .9375, 1, 1.125, 1.25];
 const msTipSizes = [.9375, 1, 1.125, 1.25, 1.5];
-const humanTipSizes = {.75: "&frac34;", .9375: "<sup>15</sup> &#8260; <sub>16</sub>", 1: "1", 1.125: "1 &frac18;", 1.25: "1 &frac14;", 1.5: "1 &frac12;"};
+const humanTipSizes = {.75: "&frac34;", .9375: " <sup>15</sup> &#8260; <sub>16</sub> ", 1: "1", 1.125: "1 &frac18;", 1.25: "1 &frac14;", 1.5: "1 &frac12;"};
 const smoothHLFlowRtes = {.75: 118, .9375: 185, 1: 210, 1.125: 266, 1.25: 328};
 const smoothMSFlowRtes = {.9375: 233, 1: 266, 1.125: 336, 1.25: 415, 1.5: 598};
 const humanWorkingFloor = {1: "second", 2: "third", 3: "fourth", 4: "fifth", 5: "sixth"}
@@ -66,7 +66,7 @@ function genWordProb() {
             probData.tipSize = msTipSizes[Math.floor(Math.random()*msTipSizes.length)];
             probData.flowRate = smoothMSFlowRtes[probData.tipSize]
         }
-        probData.humanTip = `Smooth bore nozzle with a ${humanTipSizes[probData.tipSize]} inch tip`;
+        probData.humanTip = `smooth bore nozzle with a ${humanTipSizes[probData.tipSize]} inch tip`;
     } else { //calculate fog nozzle flow
         if(probData.hoseSize < 2){
             probData.flowRate = 100;
