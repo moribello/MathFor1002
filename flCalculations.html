@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Math for 1002 - Friction Loss Calculations</title>
+<link rel="stylesheet" href="css/resets.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="header"><h1>Math for 1002 Class</h1>
+    </div>
+    
+    <div id="mainArea">
+        <div id="sectionHead">
+            <h1>Working with Formulas</h1>
+            <h2>Friction Loss Calculations</h2>
+      </div> <!-- close of sectionHead div -->
+        
+      <div class="paraHead">Using the friction loss formula</div>
+      <p>To determine the amount of friction loss in a single line we use the following formula:</p>
+      <div class="problemText">
+        <div class="formulaText">FL = CQ<sup>2</sup>L</div>
+        </div>
+        <p>Where:</p>
+        <ul>
+            <li><em>FL</em> = the total friction loss in the system (what we're trying to solve for) in pounds per square inch (psi)</li>
+            <li><em>C</em> = the friction coefficient for a particular size of hose. A chart of common values is available <em><a href="coefficientChart.html" target="_blank">here</a></em></li>
+            <li><em>Q</em> = the amount of water flow, in hundreds of gallons per minute.</li>
+            <li><em>L</em> = the amount of hose, in hundreds of feet</li>
+        </ul>
+        
+        <div class="paraHead">A word on <em>Q</em> and <em>L</em></div>
+        <p><em>Q</em> and <em>L</em> are based on hundreds of gallons per minute and hundreds of feet, respectively. So,</p>
+        <ul>
+            <li>If you were flowing 300 gpm, <em>Q</em> would be 300 gpm / 100 gpm, or <em>3</em></li>
+            <li>If you had 1000 feet of large diameter supply hose, <em>L</em> would be 1000 feet / 100 feet, or <em>10</em>
+        </ul>
+        
+        <p>In the following problem, pick out values for <em>C</em> (from <a href="coefficientChart.html" target="_blank">this chart</a>),<em>Q</em> and <em>L</em>.</p>
+        
+        <div class="problemText" id="wordProblem">
+            <p>this is placeholder text</p>
+        </div> <!-- end of word problem div -->
+        <div class="answer">
+                <div class="answerText">C</div>
+                <div class="answerBox"><input type="text" id="usrCoef"></div>
+        </div>
+        <div class="answer">
+                <div class="answerText">Q</div>
+                <div class="answerBox"><input type="text" id="usrFlow"></div>
+        </div>
+        </div>
+        <div class="answer">
+            <div class="answerText">L</div>
+                <div class="answerBox"><input type="text" id="usrLength"></div>
+        </div>
+        
+        <div class="problemText">
+            <div class="ctrlButton" id="checkAnswer">Check Answer</div>
+            <div class="ctrlButton" id="newProb">New Problem</div>
+        </div>
+        
+        <div class="navButton" id="nextButton">Next page</div>
+        
+    </div> <!-- close of mainArea div -->
+    <script src="js/genWordProb.js"></script>
+    <script src="js/checkAnswers.js"></script>
+    <script src="js/flValues.js"></script>
+    
+</body>
+</html>

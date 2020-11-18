@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+    width:400px;
+}
+
+#mainTable{
+    width: 100%;
+    font-family: Raleway;
+    font-size: 1.2em;
+    line-height: 120%;
+    border: solid 1px #000000;
+    border-collapse: collapse;
+    
+}
+
+#mainTable th{
+    background-color: #3f7cac;
+    color: #dddddd;
+}
+
+#mainTable td{
+    padding: 5px 10px;
+    text-align: center;
+}
+
+#mainTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#mainTable td, #mainTable th {
+  border: 1px solid #dddddd;
+}

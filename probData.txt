@@ -1,0 +1,16 @@
+probData{
+    isFog = boolean (is the nozzle a fog nozzle? If not, it's a smooth bore)
+    hoseSize = numeric value [1.5, 1.75, 2.5, 3, 4, 5]
+    humanNames = str (describes hose size in human names)
+    hoseLength = int (length of hose)
+    tipSize = numeric value [.75, 1, 1.25] (only exists / used if "isFog" = 'false')
+    humanTip = str from array "humanTipSizes"
+    flowRate = numeric value (calculated from isFog, tipSize, and hoseSize)
+    isMS = boolean (is this a master stream; if flowRate > 350 isMS = true)
+    isElev = boolean (is the nozzle above the pump)
+    floors = numeric value of floors above the pump
+    workingFloor = str from array "workingFloor". Note that this will be a human value for one floor above "floors" (i.e., floors = 5 will be "sixth" - five floors above the pump is the sixth floor)
+    eLoss = numeric value based on number of stories above pump
+}
+
+genWordProb [isFog]

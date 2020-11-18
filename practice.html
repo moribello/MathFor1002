@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Math for 1002 - Friction Loss Calculations</title>
+<link rel="stylesheet" href="css/resets.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="header"><h1>Math for 1002 Class</h1>
+    </div>
+    
+    <div id="mainArea">
+        <div id="sectionHead">
+            <h1>Friction Loss Calculations</h1>
+            <h2>Practice Questions</h2>
+      </div> <!-- close of sectionHead div -->
+<!--
+        
+      <div class="problemText">
+        <div class="formulaText">FL = CQ<sup>2</sup>L</div>
+        </div>
+-->
+        
+        <p>In the following problem, pick out values for <em>C</em> (from <a href="coefficientChart.html" target="_blank">this chart</a>),<em>Q</em> and <em>L</em>.</p>
+        
+        <div class="problemText" id="wordProblem">
+            <p>this is placeholder text</p>
+        </div> <!-- end of word problem div -->
+        <div class="answer">
+                <div class="answerText">C</div>
+                <div class="answerBox"><input type="text" id="usrCoef"></div>
+        </div>
+        <div class="answer">
+                <div class="answerText">Q</div>
+                <div class="answerBox"><input type="text" id="usrFlow"></div>
+        </div>
+        </div>
+        <div class="answer">
+            <div class="answerText">L</div>
+                <div class="answerBox"><input type="text" id="usrLength"></div>
+        </div>
+        
+        <div class="problemText">
+            <div class="ctrlButton" id="checkAnswer">Check Answer</div>
+            <div class="ctrlButton" id="newProb">New Problem</div>
+        </div>
+        
+        <div class="navButton" id="nextButton">Next page</div>
+        
+    </div> <!-- close of mainArea div -->
+    <script src="js/genFullProb.js"></script>
+    <script src="js/checkAnswers.js"></script>
+    <script src="js/practice.js"></script>
+    
+</body>
+</html>

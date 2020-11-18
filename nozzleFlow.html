@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Math for 1002 - Nozzle Flow</title>
+<link rel="stylesheet" href="css/resets.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="header"><h1>Math for 1002 Class</h1>
+    </div>
+    
+    <div id="mainArea">
+        <div id="sectionHead">
+            <h1>Nozzle Flow</h1>
+            <h2>Calculating flow through a nozzle</h2>
+      </div> <!-- close of sectionHead div -->
+        
+      <div class="paraHead">Fog nozzles</div>
+        <p><img class="imageRight" src="images/Fog_Nozzle_pressure.jpg" width="300px">
+            Most fog or combination nozzles have a set flow in gallons per minute; these nozzles also count on a specific pressure to deliver that flow.  The nozzle shown to the right is rated for 100 gpm at 100 psi. Thus, all a pump operator needs to know is the given rating for the fog / combination nozzles on their particular apparatus. Note that while <em>the typical pressure required for these types of nozzles is 100 psi</em> some are designed to operate at 75psi or lower pressures. An operator should be aware of all of the hose nozzles on their apparatus and their required pressures.<br><br>
+            Fog nozzles for master stream devices typically also require 100psi "at the tip" to operate, but because of their size will deliver much more flow - upwards of 350 gpm.  
+        </p>
+        
+        <div class="paraHead">Solid stream nozzles</div>
+        <p><img class="imageLeft" src="images/nzst79kf1uctpxgfs_11577348.png" height="150px">
+            Solid stream nozzles provide longer reach than fog / combination nozzles, but can't change their shape. These nozzles are essentially a pipe with a fixed diameter; the amount of water flowing through these nozzles (in gpm) depends on the size of the opening. Because these nozzles deliver much more water <em>hand lines with smooth bore nozzles should be run at 50psi "at the tip"</em> while <em>master stream devices with solid bore nozzles require 80psi</em>.
+        
+        <p>To determine how much water is flowing through a particular size of <em>smooth bore nozzle</em> we use the following formula:</p>
+        <div class="problemText">
+        <div class="formulaText">GPM = 29.7 x d<sup>2</sup> x &radic;NP</div>
+        </div>
+        <div class="problemText">
+        <ul>
+            <li><em>GPM</em> = Total flow of water from the nozzle in gallons per minute (gpm)</li>
+            <li><em>d</em> = Diameter of the nozzle's opening, in inches (1", 1.5", etc.)</li>
+            <li><em>NP</em> - Nozzle pressure. Remember that a <em>hand line requires 50 psi</em>, while <em>master streams require 80 psi</em></li>
+        </ul>
+        </div>
+        
+        <p>As with the previous calculations, it's often helpful to review what you're plugging in to the formula before you actually start trying to perform these calculations; this formula, in general, can feel a little tricky because you're squaring one value (the diameter of the nozzle's opening) and getting the square root of another value (nozzle pressure). In the following area, practice plugging in the various numbers without calculating them.</p>
+        
+        <div class="problemText" id="wordProblem">
+            <p>this is placeholder text</p>
+        </div> <!-- end of word problem div -->
+        <div class="answer">
+                <div class="answerText">Length of hose (in feet): </div>
+                <div class="answerBox"><input type="text" id="usrLength"></div>
+        </div>
+        <div class="answer">
+            <div class="answerText">Size of hose (in inches): </div>
+            <div class="answerDropdown">
+                <select name="HoseSize" id="usrHoseSize">
+                    <option value="">--</option>
+                    <option value="1.5">1 &frac12; inch (1.5)</option>
+                    <option value="1.75">1 &frac34; inch (1.75)</option>
+                    <option value="2.5">2 &frac12; inch (2.5)</option>
+                    <option value="3">3 inch (3)</option>
+                    <option value="4">4 inch (4)</option>
+                    <option value="5">5 inch (5)</option>
+                </select>
+            </div>
+        </div>
+        <div class="answer">
+            <div class="answerText">Amount of flow (in gallons per minute): </div>
+                <div class="answerBox"><input type="text" id="usrFlow"></div>
+        </div>
+        
+        <div class="problemText">
+            <div class="ctrlButton" id="checkAnswer">Check Answer</div>
+            <div class="ctrlButton" id="newProb">New Problem</div>
+        </div>
+        
+        <div class="navButton" id="nextButton">Next page</div>
+        
+    </div> <!-- close of mainArea div -->
+    <script src="js/genNozzleProb.js"></script>
+    <script src="js/checkAnswers.js"></script>
+
+    
+</body>
+</html>
