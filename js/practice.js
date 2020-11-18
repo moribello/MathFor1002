@@ -41,18 +41,18 @@ const newBut = document.getElementById("newProb");
 
 // Event listener for generating new problem
 newBut.addEventListener('click', function () {
-    let values = genWordProb();
-    probValues.flowRate = values[0];
-    probValues.hoseLength = values[1];
-    probValues.randomSize = values[2];
-    probValues.hoseSize = values[3];
+    let values = genWordProb(); // generate initial word problem
+    if(values.isElev == true){
+        document.getElementById('wordProblem').innerHTML = `Calculate the total loss of ${values.hoseLength} feet of ${values.humanNames} equipped with a ${values.humanTip}. <br> <br> Your crew is operating on the ${values.workingFloor} floor.`
+    } else {
+        document.getElementById('wordProblem').innerHTML = `Calculate the total loss of ${values.hoseLength} feet of ${values.humanNames} equipped with a ${values.humanTip}`
+    }
+    document.getElementById("usrCoef").value = "";
+    document.getElementById("usrCoef").style.backgroundColor = "#dddddd";
     document.getElementById("usrFlow").value = "";
     document.getElementById("usrFlow").style.backgroundColor = "#dddddd";
     document.getElementById("usrLength").value = "";
     document.getElementById("usrLength").style.backgroundColor = "#dddddd";
-    document.getElementById("usrHoseSize").value = "";
-    document.getElementById("usrHoseSize").style.backgroundColor = "#dddddd";
-    document.getElementById('wordProblem').innerHTML = `Your engine is currently running ${probValues.flowRate} gpm of water through ${probValues.hoseLength} feet of ${probValues.hoseSize}`
 });
 newBut.addEventListener("mouseenter", function( event ) {   
   event.target.style.backgroundColor = "ffb3b3";
