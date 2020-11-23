@@ -4,9 +4,17 @@
 body {
     width:400px;
 }
+#mainDiv {
+    display: flex;
+    margin: 0px auto 0px 12px;;
+    flex-direction: row;
+    justify-content: center;
+}
 
 #mainTable{
     width: 100%;
+    margin: 0px auto;
+    padding: 0px auto;
     font-family: Raleway;
     font-size: 1.2em;
     line-height: 120%;
