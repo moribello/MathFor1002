@@ -41,6 +41,10 @@ input[type=text] {
     vertical-align: top;
 }
 
+#flVariablesArea {
+    
+}
+
 #header {
     display: flex;
     flex-direction: row;
@@ -60,6 +64,10 @@ input[type=text] {
     flex-direction: column;
     margin-left: 10px;
     border: 1px solid #3f7cac;
+}
+
+#nozzleVariablesArea {
+    
 }
 
 #sectionHead{
@@ -83,77 +91,14 @@ input[type=text] {
     font-size: 1.5em;
 }
 
-#variablesArea {
-    display: flex;
-    flex-direction: row;
-    margin: 5px auto;
-    width: 95%;
-    background-color: #95AFBA;
-    border: 1px solid black;
-}
-
-.problemText {
-    display: flex;
-    flex-direction: row;
-    background-color: #95afba;
-    margin: 0px 20px;
-    padding: 10px 20px;
-    font-family: Montserrat;
-    font-size: 1.2em;
-    line-height: 120%;
-}
-
-.paraHead{
-    padding: 10px 0px 0px 10px;
-    font-family: Raleway;
-    font-weight: 500;
-    font-size: 1.3em;
-}
-
-.imageLeft {
-    float: left;
-    padding:0px 20px 0px 10px;
-}
-
-.imageRight {
-    float: right;
-    padding:0px 10px 0px 20px;
-}
-
-.navButton {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    background-color: #1e2749;
-    color: #dddddd;
-    width:200px;
-    height: 40px;
-    border: 1px solid #000000;
-    margin: 10px auto;
-    padding: 5px;
-    font-family: Montserrat;
-    font-weight: bold;
-    text-align: center;
-}
 
 .answer{
     display:flex;
     flex-direction: row;
     background-color: #95afba;
-    margin: 0px 20px;
+/*    margin: 0px 20px;*/
     padding: 10px 20px;
     font-size: 1.2em;
-    line-height: 120%;
-}
-
-.answerText {
-    width: 35%;
-    margin: 0px 20px;
-    padding: 10px 20px;
-    text-align: right;
-    font-family: Raleway;
-    font-size: 1em;
     line-height: 120%;
 }
 
@@ -188,6 +133,16 @@ input[type=text] {
     background-color: #95afba;
 }
 
+.answerText {
+    width: 30%;
+    margin: 0px 20px;
+    padding: 10px 20px;
+    text-align: right;
+    font-family: Raleway;
+    font-size: 1em;
+    line-height: 120%;
+}
+
 .ctrlButton {
     display: flex;
     flex-direction: column;
@@ -218,4 +173,57 @@ input[type=text] {
 .formulaText sup {
     vertical-align: super;
     font-size: smaller;
+}
+
+.imageLeft {
+    float: left;
+    padding:0px 20px 0px 10px;
+}
+
+.imageRight {
+    float: right;
+    padding:0px 10px 0px 20px;
+}
+
+.navButton {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: #1e2749;
+    color: #dddddd;
+    width:200px;
+    height: 40px;
+    border: 1px solid #000000;
+    margin: 10px auto;
+    padding: 5px;
+    font-family: Montserrat;
+    font-weight: bold;
+    text-align: center;
+}
+
+.paraHead{
+    padding: 10px 0px 0px 10px;
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.problemText {
+    display: flex;
+    flex-direction: row;
+    background-color: #95afba;
+    margin: 0px 20px;
+    padding: 10px 20px;
+    font-family: Montserrat;
+    font-size: 1.2em;
+    line-height: 120%;
+}
+
+.variablesArea {
+    display: flex;
+    flex-direction: row;
+    margin: 5px auto;
+    width: 95%;
+    background-color: #95AFBA;
 }
