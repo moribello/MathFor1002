@@ -68,6 +68,7 @@ function checkUsrAnswers() {
     //check if user is within 5 psi of total pump pressure
     let tpHigh = parseFloat(values.tPump) + 5;
     let tpLow = parseFloat(values.tPump) - 5;
+    console.log(typeof usrValues.usrPumpPress);
     if(usrValues.usrPumpPress >= tpLow && usrValues.usrPumpPress <= tpHigh) {
         document.getElementById('usrPumpPress').style.backgroundColor = '#ccff66';
         } else {
@@ -112,7 +113,12 @@ newBut.addEventListener('click', function () {
     document.getElementById("usrDiam").style.backgroundColor = "#dddddd";
     document.getElementById("usrNP").value = "";
     document.getElementById("usrNP").style.backgroundColor = "#dddddd";
-    console.log(values);
+    document.getElementById("usrFL").value = "";
+    document.getElementById("usrFL").style.backgroundColor = "#dddddd";
+    document.getElementById("usrEL").value = "";
+    document.getElementById("usrEL").style.backgroundColor = "#dddddd";
+    document.getElementById("usrPumpPress").value = "";
+    document.getElementById("usrPumpPress").style.backgroundColor = "#dddddd";
 });
 
 newBut.addEventListener("mouseenter", function( event ) {   
